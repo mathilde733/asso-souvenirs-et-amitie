@@ -36,24 +36,25 @@ button {
     color: #1f2937;
 }
 
-.gallery{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:15px;
-    margin-top:20px;
+.gallery {
+    display: grid;
+    /* Cela crée des colonnes d'au moins 250px, qui s'ajustent automatiquement */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
 }
 
-.gallery img{
-    width:100%;
-    height:250px;
-    object-fit:cover;
-    border-radius:10px;
-    box-shadow:0 2px 8px rgba(0,0,0,0.2);
-    transition:transform 0.3s;
+.gallery img {
+    width: 100%;       /* L'image prend toute la largeur de sa "cellule" */
+    height: 250px;     /* Force une hauteur fixe pour l'uniformité */
+    object-fit: cover; /* Recadre l'image pour qu'elle ne soit pas déformée */
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    transition: transform 0.3s;
 }
 
-.gallery img:hover{
-    transform:scale(1.03);
+.gallery img:hover {
+    transform: scale(1.03);
 }
 
 .credit{
