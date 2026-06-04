@@ -38,23 +38,22 @@ button {
 
 .gallery {
     display: grid;
-    /* Cela crée des colonnes d'au moins 250px, qui s'ajustent automatiquement */
+    /* On définit 3 ou 4 colonnes pour une meilleure lisibilité */
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 15px;
     margin-top: 20px;
+    /* Ajout important pour stabiliser la grille */
+    align-items: start; 
 }
 
 .gallery img {
-    width: 100%;       /* L'image prend toute la largeur de sa "cellule" */
-    height: 250px;     /* Force une hauteur fixe pour l'uniformité */
-    object-fit: cover; /* Recadre l'image pour qu'elle ne soit pas déformée */
+    width: 100%;       
+    height: 250px;     /* Hauteur fixe pour toutes */
+    object-fit: cover; /* C'est la commande magique : elle recadre l'image pour remplir les 250px sans déformation */
+    object-position: center; /* Centre l'image dans le cadre */
     border-radius: 10px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-    transition: transform 0.3s;
-}
-
-.gallery img:hover {
-    transform: scale(1.03);
+    display: block;    /* Évite les espaces blancs sous les images */
 }
 
 .credit{
